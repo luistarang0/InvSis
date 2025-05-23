@@ -4,7 +4,7 @@ using InvSis.Controller;
 
 namespace API_Ventas.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/productos")]
     [ApiController]
     public class API_ProductosController : ControllerBase
     {
