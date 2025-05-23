@@ -15,6 +15,19 @@ namespace InvSis.Controller
         private static readonly Logger _logger = LoggingManager.GetLogger("Sistema_Ventas.Controller.CompraController");
         private readonly ProductosDataAccess _productosData;
 
+        public ProductoController()
+        {
+            try
+            {
+                _productosData = new ProductosDataAccess();
+            }
+            catch (Exception)
+            {
+                _logger.Error("Error al inicializar la clase ProductoController");
+                throw;
+            }
+        }
+
         public List<Producto> ObtenerProductos()
         {
             try
