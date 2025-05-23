@@ -6,12 +6,12 @@ namespace API_Ventas.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class VentasAPIController : ControllerBase
+    public class API_ProductosController : ControllerBase
     {
         private readonly ProductoController _productosController;
-        private readonly ILogger<VentasAPIController> _logger;
+        private readonly ILogger<API_ProductosController> _logger;
 
-        public VentasAPIController(ProductoController compraController, ILogger<VentasAPIController> logger)
+        public API_ProductosController(ProductoController compraController, ILogger<API_ProductosController> logger)
         {
             _productosController = compraController;
             _logger = logger;
