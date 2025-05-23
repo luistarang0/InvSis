@@ -2,10 +2,10 @@
 using Microsoft.AspNetCore.Mvc;
 using InvSis.Controller;
 
-namespace API_Ventas.Controllers
+namespace ApInv.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/[controller]")]    
     public class APIProductosController : ControllerBase
     {
         private readonly ProductoController _productosController;
@@ -27,8 +27,7 @@ namespace API_Ventas.Controllers
         /// <param name="estatus">Estatus de la compra (opcional)</param>
         /// <returns>Lista de compras/ventas con detalles como fecha, número de venta, cliente, estatus, cantidad y costo</returns>
         [HttpGet("productos")]
-        public IActionResult GetVentasPorArticulo(
-            [FromQuery] int? idProducto = null)
+        public IActionResult GetVentasPorArticulo()
         {
             try
             {
