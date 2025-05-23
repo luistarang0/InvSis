@@ -4,14 +4,14 @@ using InvSis.Controller;
 
 namespace API_Ventas.Controllers
 {
-    [Route("api/productos")]
+    [Route("api/[controller]")]
     [ApiController]
-    public class API_ProductosController : ControllerBase
+    public class APIProductosController : ControllerBase
     {
         private readonly ProductoController _productosController;
-        private readonly ILogger<API_ProductosController> _logger;
+        private readonly ILogger<APIProductosController> _logger;
 
-        public API_ProductosController(ProductoController compraController, ILogger<API_ProductosController> logger)
+        public APIProductosController(ProductoController compraController, ILogger<APIProductosController> logger)
         {
             _productosController = compraController;
             _logger = logger;
@@ -45,4 +45,5 @@ namespace API_Ventas.Controllers
         }
     }
 }
+
 
